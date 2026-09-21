@@ -54,6 +54,18 @@ public:
         }
 
     }
+    int searchitr(int key){
+        Node* temp=head;
+        int idx =0;
+        while(temp != NULL){
+            if(temp->data == key){
+                return idx;
+            }
+            temp = temp->next
+            idx++
+        } 
+        return -1
+    }
     
         
 
@@ -61,9 +73,11 @@ public:
     int main(){
         list l1;
         l1.push_front(3);
+        l1.push_front(5);
         l1.push_front(2);
         l1.push_front(1);
         l1.printlist();
+        cout<<l1.searchItr(5)<<endl;
 
         return 0;
     }   
